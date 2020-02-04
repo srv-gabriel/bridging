@@ -1,14 +1,7 @@
-def connected(img, i, j):
+def connected4(img, i, j):
+    l = [img[i-1][j], img[i][j+1], img[i+1][j], img[i][j-1]]
     
-    x = [img[i-1][j-1], img[i][j-1], img[i+1][j-1]]
-    y = [img[i-1][j+1], img[i][j+1], img[i+1][j+1]]
-    m = img[i-1][j-1:j+2]
-    n = img[i+1][j-1:j+2]
-    
-    a = any(x) and any(y)
-    b = any(m) and any(n)
-    
-    if(a or b):
+    if(sum(l)>1):
         return True
     else:
         return False
