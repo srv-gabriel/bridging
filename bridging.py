@@ -13,7 +13,7 @@ def bridging(img):
         for j in range(1, img.shape[1]-1):
             
             if(img[i][j]==0):
-                if(connected(img, i, j)):
+                if(connected4(img, i, j)):
                     aux[i][j] = 1
             
     return aux
